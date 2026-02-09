@@ -1,0 +1,122 @@
+:root {
+  --primary: #0d6efd;          /* Azul principal Bootstrap, pero más oscuro */
+  --primary-dark: #0a58ca;
+  --accent: #00d4ff;           /* Cian neón elegante */
+  --dark-bg: #0a0a15;
+  --dark-card: #121226;
+  --dark-border: #2a2a3f;
+  --text-light: #e0e0ff;
+  --text-muted: #a0a0cc;
+  --overlay: rgba(10, 10, 25, 0.78);
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  background-color: #05050f !important;
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 700;
+}
+
+.nav-link {
+  color: #d0d0ff !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent) !important;
+}
+
+h1, h2, h3 {
+  color: white;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline-light {
+  border-color: var(--accent);
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: var(--accent);
+  color: #0a0a15;
+  transform: translateY(-2px);
+}
+
+.card {
+  background-color: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 212, 255, 0.15);
+}
+
+.card-title {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.list-unstyled li {
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+#inicio {
+  position: relative;
+}
+
+#inicio::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--overlay);
+  z-index: 1;
+}
+
+#inicio > .container {
+  position: relative;
+  z-index: 2;
+}
+
+footer {
+  background-color: #05050f;
+  border-top: 1px solid var(--dark-border);
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  h1.display-3 {
+    font-size: 3rem;
+    
+
+  }
+}
